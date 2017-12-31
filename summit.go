@@ -7,6 +7,9 @@ import (
 	"fmt"
 )
 
+// VERSION is the current version of this program.
+const VERSION = "0.0.1-indev"
+
 func main() {
 	args := arguments.ParseArguments()
 	sum := summer.GetSum(*args.SumType, *args.FilePath)
