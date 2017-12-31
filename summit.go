@@ -1,9 +1,9 @@
 package main
 
 import (
-	"com/blakebartenbach/checksum/arguments"
-	"com/blakebartenbach/checksum/colors"
-	"com/blakebartenbach/checksum/summer"
+	"com/blakebartenbach/summit/arguments"
+	"com/blakebartenbach/summit/colors"
+	"com/blakebartenbach/summit/summer"
 	"fmt"
 )
 

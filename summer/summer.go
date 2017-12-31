@@ -31,6 +31,5 @@ func calcMd5Sum(filePath string) string {
 	if _, err := io.Copy(h, f); err != nil {
 		log.Fatal(err)
 	}
-	val, err := fmt.Printf("%x", h.Sum(nil))
-	return string(val)
+	return fmt.Sprintf("%x", h.Sum(nil))
 }
