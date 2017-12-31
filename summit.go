@@ -3,7 +3,7 @@ package main
 import (
 	"com/blakebartenbach/summit/arguments"
 	"com/blakebartenbach/summit/colors"
-	"com/blakebartenbach/summit/summer"
+	"com/blakebartenbach/summit/hasher"
 	"fmt"
 )
 
@@ -12,13 +12,13 @@ const VERSION = "0.0.1-indev"
 
 func main() {
 	args := arguments.ParseArguments()
-	sum := summer.GetSum(*args.SumType, *args.FilePath)
-	if sum != *args.ExpectedSum {
+	fileHash := hasher.GetHash(*args.HashType, *args.FilePath)
+	if fileHash != *args.ExpectedHash {
 		fmt.Println(colors.RED, "Sums do not match!", colors.RESET)
 
 	} else {
 		fmt.Println(colors.GREEN, "Sums match!", colors.RESET)
 	}
-	fmt.Println("    Expected: ", colors.YELLOW, *args.ExpectedSum, colors.RESET)
-	fmt.Println("    Found:    ", colors.YELLOW, sum, colors.RESET)
+	fmt.Println("    Expected: ", colors.YELLOW, *args.ExpectedHash, colors.RESET)
+	fmt.Println("    Found:    ", colors.YELLOW, fileHash, colors.RESET)
 }
