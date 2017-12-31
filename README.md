@@ -14,6 +14,7 @@ The help menu should be sufficient enough, but you will generally use 3 argument
 * `-e` this is the *correct* checksum you are hoping that your file has, if all went well.
 
 ## examples
-`summit -t md5 -f ./archlinux.iso -e d0ae8c4b4a037238e5f0880243d4619e`
-`summit -t sha1 -f ~/.bashrc`
-The `-e` flag is optional in a sense.  You can still get the hash of a file without specifying it.
+* `summit -t md5 -f ./archlinux.iso -e d0ae8c4b4a037238e5f0880243d4619e`
+* `summit -t sha1 -f ~/.bashrc`
+
+Note: The `-e` flag is optional in a sense.  You can still get the hash of a file without specifying it.
