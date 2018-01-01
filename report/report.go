@@ -1,8 +1,8 @@
 package report
 
 import (
-	"com/blakebartenbach/summit/arguments"
-	"com/blakebartenbach/summit/colors"
+	"github.com/proxa/summit/arguments"
+	"github.com/proxa/summit/colors"
 	"fmt"
 	"os"
 )
