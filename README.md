@@ -24,5 +24,5 @@ Note: The `-e` flag is optional.  You can just get the hash of a file without sp
 `go get github.com/proxa/summit`
 
 #### just the executable
-This was compiled on 64-bit Linux. I'm not entirely sure if Go execuatables can be dropped on different operating systems or architectures.)
+* Note: This was compiled on 64-bit Linux. I'm not entirely sure if Go execuatables can be dropped on different operating systems or architectures.
 https://alureon.net/summit
