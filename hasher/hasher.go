@@ -3,6 +3,8 @@ package hasher
 import (
 	"crypto/md5"
 	"crypto/sha1"
+	"crypto/sha256"
+	"crypto/sha512"
 	"fmt"
 	"hash"
 	"io"
@@ -17,7 +19,9 @@ func GetHash(hashType string, filePath string) string {
 	} else if hashType == "sha1" {
 		return calcHash(sha1.New(), filePath)
 	} else if hashType == "sha256" {
-
+		return calcHash(sha256.New(), filePath)
+	} else if hashType == "sha512" {
+		return calcHash(sha512.New(), filePath)
 	}
 	return ""
 }

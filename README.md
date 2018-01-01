@@ -9,7 +9,7 @@ Ever try and validate file integrity checksums before by just looking at them?  
 
 The help menu should be sufficient enough, but you will generally use 3 arguments.
 
-* `-t` this is the type of hash to use to validate your checksum.  Typically md5 or sha1.
+* `-t` this is the type of hash to use to validate your checksum. can be md5, sha1, sha256, or sha512.
 * `-f` this is the path to the file you want to verify.
 * `-e` (optional) this is the *correct* checksum you are hoping that your file has, if all went well.
 

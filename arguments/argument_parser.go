@@ -16,7 +16,7 @@ type Arguments struct {
 
 // ParseArguments parses the command line arguments for the program.
 func ParseArguments() Arguments {
-	var hType = flag.String("t", "", "Hash algorithm to use (md5, sha1)")
+	var hType = flag.String("t", "", "Hash algorithm to use (md5, sha1, sha256, sha512)")
 	var file = flag.String("f", "", "The path to the file to check")
 	var expected = flag.String("e", "", "The expected file hash (optional)")
 	flag.Parse()
@@ -25,7 +25,7 @@ func ParseArguments() Arguments {
 		flag.PrintDefaults()
 		os.Exit(1)
 	}
-	if *hType != "md5" && *hType != "sha1" {
+	if *hType != "md5" && *hType != "sha1" && *hType != "sha256" && *hType != "sha512" {
 		fmt.Println("Algorithm '", *hType, "' not yet supported.")
 		fmt.Println("(see summit -h for help)")
 		os.Exit(1)

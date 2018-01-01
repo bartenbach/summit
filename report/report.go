@@ -16,7 +16,6 @@ func CreateReport(fileHash string, args arguments.Arguments) {
 		fmt.Println("    ", fileHash)
 		os.Exit(0)
 	} else {
-
 		if fileHash != *args.ExpectedHash {
 			fmt.Println(colors.RED, "Sums do not match!", colors.RESET)
 			printHashDiff(*args.ExpectedHash, fileHash, colors.YELLOW)
