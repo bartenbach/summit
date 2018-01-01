@@ -1,9 +1,9 @@
 package main
 
 import (
-	"com.blakebartenbach/summit/arguments"
-	"com.blakebartenbach/summit/hasher"
-	"com.blakebartenbach/summit/report"
+	"github.com/proxa/summit/arguments"
+	"github.com/proxa/summit/hasher"
+	"github.com/proxa/summit/report"
 )
 
 func main() {
