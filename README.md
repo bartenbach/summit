@@ -11,10 +11,17 @@ The help menu should be sufficient enough, but you will generally use 3 argument
 
 * `-t` this is the type of hash to use to validate your checksum.  Typically md5 or sha1.
 * `-f` this is the path to the file you want to verify.
-* `-e` this is the *correct* checksum you are hoping that your file has, if all went well.
+* `-e` (optional) this is the *correct* checksum you are hoping that your file has, if all went well.
 
 ## examples
 * `summit -t md5 -f ./archlinux.iso -e d0ae8c4b4a037238e5f0880243d4619e`
 * `summit -t sha1 -f ~/.bashrc`
 
-Note: The `-e` flag is optional in a sense.  You can still get the hash of a file without specifying it.
+Note: The `-e` flag is optional.  You can just get the hash of a file without specifying it.
+
+## installation
+#### the Go way
+`go get github.com/proxa/summit`
+
+#### just the executable
+https://alureon.net/summit

@@ -4,6 +4,9 @@ import "flag"
 import "fmt"
 import "os"
 
+// VERSION is the current version of this program.
+const VERSION = "0.0.1-indev"
+
 // Arguments represents the arguments passed to the program.
 type Arguments struct {
 	HashType     *string
@@ -17,8 +20,19 @@ func ParseArguments() Arguments {
 	var file = flag.String("f", "", "The path to the file to check")
 	var expected = flag.String("e", "", "The expected file hash (optional)")
 	flag.Parse()
-	if *hType != "md5" {
+	if *hType == "" {
+		fmt.Println("summit version ", VERSION)
+		flag.PrintDefaults()
+		os.Exit(1)
+	}
+	if *hType != "md5" && *hType != "sha1" {
 		fmt.Println("Algorithm '", *hType, "' not yet supported.")
+		fmt.Println("(see summit -h for help)")
+		os.Exit(1)
+	}
+	if *file == "" {
+		fmt.Println("No input file specified.  Please specify a file using -f")
+		fmt.Println("(see summit -h for help)")
 		os.Exit(1)
 	}
 	if _, err := os.Stat(*file); os.IsNotExist(err) {
