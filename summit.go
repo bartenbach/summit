@@ -1,9 +1,9 @@
 package main
 
 import (
-	"com/blakebartenbach/summit/arguments"
-	"com/blakebartenbach/summit/hasher"
-	"com/blakebartenbach/summit/report"
+	"com.blakebartenbach/summit/arguments"
+	"com.blakebartenbach/summit/hasher"
+	"com.blakebartenbach/summit/report"
 )
 
 func main() {
