@@ -1,3 +1,4 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/proxa/summit)](https://goreportcard.com/report/github.com/proxa/summit)
 # summit
 summit is a command line checksum validator.
 ![summmit](summit.png "Picture of summit in action")
