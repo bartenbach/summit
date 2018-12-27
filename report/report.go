@@ -1,9 +1,9 @@
 package report
 
 import (
+	"fmt"
 	"github.com/proxa/summit/arguments"
 	"github.com/proxa/summit/colors"
-	"fmt"
 	"os"
 )
 
